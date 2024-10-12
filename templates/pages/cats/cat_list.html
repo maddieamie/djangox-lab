@@ -1,0 +1,9 @@
+<h1>Cat List</h1>
+<ul>
+  {% for cat in cats %}
+    <li>
+      <a href="{% url 'cat_detail' cat.id %}">{{ cat.name }}</a> ({{ cat.breed }})
+    </li>
+  {% endfor %}
+</ul>
+<a href="{% url 'cat_create' %}">Add new cat</a>

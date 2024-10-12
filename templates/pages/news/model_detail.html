@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<h1>Custom Models List</h1>
+<ul>
+    {% for model in object_list %}
+        <li><a href="{% url 'model_detail' model.pk %}">{{ model.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

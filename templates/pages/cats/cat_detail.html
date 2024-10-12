@@ -1,0 +1,10 @@
+<h1>{{ cat.name }} ({{ cat.breed }})</h1>
+<img src="{% if cat.image %}{{ cat.image.url }}{% else %}{% static 'default_cat.png' %}{% endif %}" alt="Cat Image" style="width:200px;"/>
+<p>Nicknames: {{ cat.nicknames }}</p>
+<p>Emoji preference: {{ cat.emoji_preference }}</p>
+<p>Color: {{ cat.color }}</p>
+<p>Tail: {{ cat.tail }}</p>
+<p>Age: {{ cat.age }}</p>
+<p>Magical properties: {{ cat.magical_properties }}</p>
+<a href="{% url 'cat_update' cat.id %}">Edit</a>
+<a href="{% url 'cat_delete' cat.id %}">Delete</a>

@@ -1,0 +1,7 @@
+<h1>Delete {{ cat.name }}?</h1>
+<p>Are you sure you want to delete {{ cat.name }}?</p>
+<form method="POST">
+  {% csrf_token %}
+  <button type="submit">Confirm</button>
+</form>
+<a href="{% url 'cat_list' %}">Cancel</a>
